@@ -1,2 +1,22 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+
+{{#each stories}}
+  <h3>{{this.writer}}</h3>
+  <h4>{{this.content}}</h4>
+  <p>{{this.date}}</p>
+{{/each}}
+
+<form class="form"action="/add-story" method="post">
+Your sentence <input type="text" name="content">
+
+
+Your name<input type="text" name="writer">
+
+<button class="btn">Add</button>
+
+
+</form>
+
+
